@@ -1,5 +1,5 @@
 from django.urls import path
-from . import views
-
+from .views.admin_view import AnalyticsView
 urlpatterns = [
+    path("analytics/", AnalyticsView.as_view()),
 ]
