@@ -1,0 +1,14 @@
+[run]
+source = store
+omit =
+    */migrations/*
+    */tests/*
+    */__init__.py
+
+[report]
+ignore_errors = True
+show_missing = True
+skip_covered = False
+
+[html]
+directory = coverage_html
