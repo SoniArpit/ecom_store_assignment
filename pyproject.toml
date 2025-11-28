@@ -1,0 +1,12 @@
+[project]
+name = "ecom-store-assignment"
+version = "0.1.0"
+description = "Ecommerce Store Assignment"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "django==5.2.8",
+    "djangorestframework==3.16.1",
+    "drf-spectacular==0.29.0",
+    "coverage==7.12.0"
+]
