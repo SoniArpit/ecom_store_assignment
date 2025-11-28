@@ -4,20 +4,17 @@ class OrderService:
 
     @staticmethod
     def _validate_coupon(code):
-        # check if coupon code is in current coupon
-        
-        if STORE["current_coupon"]["code"] != code:
-            raise Exception("Invalid coupon code")
-        
-        # check if coupon is already used
-        if STORE["current_coupon"]["used"]:
-            raise Exception("Coupon already used")
-        
-        # check if coupon is expired
-        if STORE["current_coupon"]["expired"]:
-            raise Exception("Coupon expired")
+        # 1. Check if it matches the CURRENT active coupon
+        current = STORE["current_coupon"]
+        if current and current["code"] == code:
+            if current["used"]:
+                raise Exception("Coupon already used")
+            if current["expired"]:
+                raise Exception("Coupon expired")
+            return current
 
-        return STORE["current_coupon"]
+        # 2. If not found in current, it's invalid
+        raise Exception("Invalid coupon code")
 
     @staticmethod
     def create_order(user_id, applied_coupon=None):
