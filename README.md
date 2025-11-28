@@ -14,6 +14,8 @@ This project implements a simple e-commerce store API with cart management, chec
 
 ## Tech Stack
 
+I have chosen **Django** and **Django REST Framework** for this assignment.
+
 - Python 3.13
 - Django & Django REST Framework
 - `drf-spectacular` for API Documentation
