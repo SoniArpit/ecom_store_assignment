@@ -1,6 +1,6 @@
 STORE = {
     "carts": {},
-    "orders": {},
+    "orders": [],
     "current_coupon": None, # example: { "code": "SAVE10", "is_used": False}
     "coupons_history": [], # History of previously generated coupons (used or expired)
     "total_orders": 0,   
